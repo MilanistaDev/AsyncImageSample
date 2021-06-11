@@ -8,9 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    private let profileImageLink = "http://github.com/milanistaDev.png"
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            VStack {
+                AsyncImage(url: URL(string: profileImageLink))
+            }
+            .navigationTitle("AsyncImage Sample")
+        }
     }
 }
 
